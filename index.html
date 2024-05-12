@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>simple calculator</title>
+  <style>
+  
+    .but{
+      background-color: greenyellow;
+      color: green;
+      border: 2px dotted brown;
+      height: 1.9rem;
+      margin: 3px;
+    }
+    
+    .main{
+      width: 31rem;
+      margin: 23rem auto;
+      height: 11rem;
+      background-color: #fffff10;
+      backdrop-filter: blur(35px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      padding: 3rem;
+    }
+    
+    body{
+      background-image: url("img.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      background-color: wheat;
+    }
+    
+    #sec{
+      background-color: gold;
+      color: blueviolet;
+      height: 1.5rem;
+      margin: 5px;
+      border: 2px solid silver;
+    }
+    
+    input{
+      border: 2px double seagreen;
+      color: darkolivegreen;
+      height: 1.5rem;
+    }
+    
+    h1{
+      color: #3CD719;
+      text-shadow: 1px 3px #88C37B;
+      text-align: center;
+      border-bottom: 4px double #353643;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    
+  <h1>SIMPLE CALCULATOR</h1>
+   
+  
+    
+  <input type="text" name="one" id="one" step="any">
+  
+  <select name="" id="sec">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">×</option>
+    <option value="/">/</option>
+  </select>
+  
+  <input type="text" name="two" id="two" step="any">
+  
+  <br>
+  <br>
+  <br>
+  
+  <button type="submit" onclick="cal()" class="but">calculator</button>
+  
+  <input type="text" name="" id="ans" readonly="">
+  
+  </div>
+ 
+          <!-- java script -->
+  
+<script>
+
+  function cal(){
+    var opr1 = document.getElementById('one').value;
+    var opr2 = document.getElementById('two').value;
+    var sec = document.getElementById('sec').value;
+    if (sec == '+') {
+      var ans = parseInt(opr1)+parseInt(opr2);
+    }
+    if(sec == '-'){
+      var ans=parseInt(opr1)-parseInt(opr2);
+    }
+    if(sec == '*') {
+      var ans=parseInt(opr1)*parseInt(opr2);
+    }
+    if(sec == '/') {
+      var ans=parseInt(opr1)/parseInt(opr2);
+    }
+    document.getElementById('ans'). value = ans;
+  }
+</script>
+</body>
+
+</html>
